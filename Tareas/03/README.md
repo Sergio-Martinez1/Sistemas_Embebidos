@@ -3,7 +3,7 @@
 ## Paquete de Simulación
 ### Sergio David Martínez González
 
-En esta sección se encuentra lo relacionado con Sensores:
+El paquete de simulación contiene:
 1. Código de Arduino
 2. Simulación de Proteus
 3. Documentación
