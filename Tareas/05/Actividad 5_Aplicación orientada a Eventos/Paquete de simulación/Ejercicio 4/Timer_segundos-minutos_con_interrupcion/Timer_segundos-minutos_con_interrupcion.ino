@@ -1,6 +1,6 @@
 #define LED 13 //Declara el PIN 13 como LED
 #define LEDI 12
-//Llama las librerías
+//Llama las librerías (Se necesita instalar la librería LiquidCrystal y TimerOne)
 #include <LiquidCrystal.h>     
 #include <TimerOne.h>    
 //Variable para la interrupción
