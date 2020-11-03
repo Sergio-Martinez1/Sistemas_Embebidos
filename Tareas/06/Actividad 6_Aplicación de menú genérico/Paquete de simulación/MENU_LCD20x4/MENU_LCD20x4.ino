@@ -1,14 +1,8 @@
-/**
- * Autor: Misael Saenz Flores
- * Esta obra está bajo una Licencia Creative Commons 
- * Atribución-NoComercial-SinDerivadas 4.0 Internacional.
- */
-
 #include <Wire.h> 
 #include <LiquidCrystal_I2C.h>
 LiquidCrystal_I2C lcd(0x27,20,4);
 
-const byte NumMenuP = 3;
+const byte NumMenuP = 4;
 const byte NumMaxSubM = 3;
 const byte NumBttn = 5;
 
@@ -24,11 +18,13 @@ byte Buttn[NumBttn] = {
 String MenuP[NumMenuP] = {
   "*INICIO*",
   "*ENCENDER LED*",
+  "*ENCENDER LED2*",
   "*INTEGRANTES*",
 };
 
 String SubMenus[NumMenuP][NumMaxSubM] = {
   {"Sub item 1","Sub item 2", "Sub item 3"},
+  {"LED ON","LED OFF", ""},
   {"LED ON","LED OFF", ""},
   {"Sergio David","Julio Rangel", "Jesus Emiliano"},
 };
@@ -40,6 +36,7 @@ unsigned long tiempo;
 int x = -1;
 int y = 0;
 int LED = 8;
+int LED1 = 9;
 int cuenta = 0; 
 int cuenta2 = 0; 
 
@@ -56,7 +53,7 @@ void setup() {
   lcd.setCursor(3,1);
   lcd.print("Arduino");
   delay(500);
-    lcd.clear();
+  lcd.clear();
   lcd.setCursor(0,0);
   lcd.print(" MENU PRINCIPAL");
   lcd.setCursor(0,2);
@@ -65,6 +62,7 @@ void setup() {
   lcd.print(" tecla...");
   tiempo = millis();
   pinMode(LED, OUTPUT);
+  pinMode(LED1, OUTPUT);
 }
 
 void loop() {
@@ -129,6 +127,11 @@ void loop() {
           digitalWrite(LED, HIGH);
         } else if (x == 1 && y == 1){
           digitalWrite(LED, LOW);
+        }
+        if(x == 2 && y == 0){
+          digitalWrite(LED1, HIGH);
+        } else if (x == 2 && y == 1){
+          digitalWrite(LED1, LOW);
         }
       }
 
