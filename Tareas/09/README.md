@@ -1,5 +1,11 @@
-# Sistemas Embebidos
+# Tarea Número 09
+## Sistemas en tiempo real con FreeRTOS
+### Equipo 06:
+### - Sergio David Martínez González
+### - Jesús Emiliano Mendoza
+### - Julio Rangel Pulido
 
-Autor: Sergio David Martínez González
-
-Repositorio creado como evidencia de las tareas y proyectos realizados durante la experiencia educativa de Tópicos II: Sistemas Embebidos, las tareas se encuentran en orden cronológico y se presentan tanto las realizadas de forma individual como las realizadas en equipo. 
+En esta actividad se va a desarrollar un programa el cual realizará distintas tareas usando un sistema operativo de tiempo real (FreeRTOS) 
+en este caso se utilizará una placa Esp32 por la facilidad de que no necesita de ninguna librería para ser compatible con el sistema operativo ya mencionado.
+Las tareas mencionadas serán un total de 8 estas contaran con distintas conclusiones, también tendrán interrupciones a distintos momentos, 
+algunas tareas se comunicarán con otras y todas las acciones que lleven a cabo serán mostradas al usuario a través del puerto serial.
